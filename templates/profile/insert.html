@@ -1,0 +1,178 @@
+{% include "profile/profile.html" %}
+
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'insert.css' %}"> -->
+<style type="text/css">
+.school{
+    margin: 10% 0% 2% 10%;
+}
+.school button{
+    background: #fff3f3;
+    font-size: 16px;
+    border:none;
+    border-radius: 10%;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor:pointer;
+    padding: 4% 12% 4% 12%;
+}
+.school button:hover{box-shadow: 0 0 20px 0px rgba(0,0,0,0.6);
+}
+#button2{
+    margin-left: 15%;
+}
+.dropbtn {
+  background-color: #fff3f3;
+  padding: 10px 20px 10px 20px;
+  font-size: 10px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin:8% 0% 22% 5% ;
+/*  padding: 2% 0% 0% 5%;*/
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  font-size: 8px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+#dropbtn1{
+background-color:#00FFFF
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+body {
+    height: 100%;
+    background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="school">
+                <button onclick="window.location.href={% url 'onetofive' %}" id="button1"> First To Fifth  </button>
+                <button onclick="window.location.href={% url 'sixtoten' %}" id="button2">  Sixth to Tenth  </button>                
+    </div>
+    <div class="dropdown">
+                    <button class="dropbtn" >Eleventh And Twelfth <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'Mathscience' %}">Maths Science</a>
+          
+                        <a href="{% url 'Biology' %}">Biology</a>
+                    
+                        <a href="{% url 'Commerce' %}">Commerce</a>
+                    
+                        <a href="{% url 'Arts' %}">Arts</a>
+                    
+                        <a href="{% url 'Agriculture' %}">Agriculture</a>
+                    </div>
+    </div>
+    <div class="dropdown">
+                    <button class="dropbtn">Bachelor of Engineer <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'Computerscience' %}">Computer Science (CSE)</a>
+
+                        <a href="{% url 'Informationtechnology' %}">Information Technology (IT)</a>
+             
+                        <a href="{% url 'Mechenical' %}">Mechenical</a>
+                        
+                        <a href="{% url 'Civil' %}">Civil</a> 
+                        
+                        <a href="{% url 'Electronic' %}">Electronic</a>
+                    </div>
+                </div>
+    <div class="dropdown">
+                    <button class="dropbtn">Bachelor of Science <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'BScComputerscience' %}">B.Sc. Computer Science</a>
+
+                        <a href="{% url 'BScInformationtechnology' %}">B.Sc. Information Technology</a>
+                        
+                        <a href="{% url 'BScPhysics' %}">B.Sc. Physics</a>
+                        
+                        <a href="{% url 'BScNursing' %}">B.Sc. Nursing </a> 
+                        
+                        <a href="{% url 'BScAgriculture' %}">B.Sc. Agriculture</a>
+                    </div>
+                </div>
+    <div class="dropdown">
+                    <button class="dropbtn">Bachelor of Commerce <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'BCominAccountancy' %}">B.Com. in Accountancy</a>
+
+                        <a href="{% url 'BCominBankingandFinance' %}">B.Com. in Banking and Finance</a>
+                 
+                        <a href="{% url 'CominBusinessAdministration' %}">B.Com. in Business Administration</a>
+                        
+                        <a href="{% url 'BCominE_Commerce' %}">B.Com. in E-Commerce</a>
+                        
+                        <a href="{% url 'BCominFinance' %}">B.Com. in Finance</a>
+                    </div>
+                </div>
+
+        {% comment %} <h3>College</h3>
+    <div class="College">
+        <div class = "College-stream">
+            <h4>Engineer</h4>
+            <p>Select Stream</p>
+            <div class="Engineer-Select-stream" >
+                <        <a href="{% url 'Computerscience' %}">Computer Science (CSE)</a>
+                <a href="{% url 'Informationtechnology' %}">Information Technology (IT)</a>
+             <a href="{% url 'Mechenical' %}">Mechenical</a>
+             <a href="{% url 'Civil' %}">Civil</a> 
+             <a href="{% url 'Electronic' %}">Electronic</a></li>
+            </div>
+        </div>
+
+        <div class = "College-stream">
+            <h4>B.Com</h4>
+            <p>Select Stream</p>
+            <div class="B.Com-Select-stream" >
+                <ul> <a href="{% url 'BCominAccountancy' %}">B.Com. in Accountancy
+                 <a href="{% url 'BCominBankingandFinance' %}">B.Com. in Banking and Finance</a>
+                 <a href="{% url 'CominBusinessAdministration' %}">B.Com. in Business Administration</a>
+                 <a href="{% url 'BCominE_Commerce' %}">B.Com. in E-Commerce</a>
+                 <a href="{% url 'BCominFinance' %}">B.Com. in Finance</a></li></ul>
+            </div>
+        </div>
+        
+        <div class = "College-stream">
+        <h4>BSC</h4>
+            <p>Select Stream</p>
+            <div class="BSC-Select-stream" >
+                <ul> <a href="{% url 'BScComputerscience' %}">B.Sc. Computer Science</a>
+                 <a href="{% url 'BScInformationtechnology' %}">B.Sc. Information Technology (IT)</a>
+                 <a href="{% url 'BScPhysics' %}">B.Sc. Physics</a>
+                 <a href="{% url 'BScNursing' %}">B.Sc. Nursing </a> 
+                 <a href="{% url 'BScAgriculture' %}">B.Sc. Agriculture</a></li>
+            </div>
+        </div> {% endcomment %}
+
+{{email}}
+    
+</body>
+</html>
+
+

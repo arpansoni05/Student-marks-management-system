@@ -1,0 +1,58 @@
+{% include "profile/profile.html" %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style type="text/css">
+        body{
+            height: 100%;
+            background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+        }
+    	.show-table{
+    		text-align: center;
+    		margin: 5% 0% 0% 10%;
+    		flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 5%;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;   
+            font-size: 12px;
+    	}
+        th td{
+            margin-right:10%;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="show-div">
+        <table class="show-table">
+			<tr> <th>Id No</th>
+			    <th>Roll Number</th>
+			    <th>E-mail</th> 
+			    
+			</tr>
+			    {% for line in show %}
+			<tr>
+			    {% comment %} <td><a href="#">{{ x.id }}</a></td> {% endcomment %}
+                <td>{{ line.id }}</td> 
+                <td>{{ line.roll_number }}</td>
+                <td>{{ line.email1}}</td>
+                <td><a href="#">Details</a>
+
+			</tr>
+			    {% endfor %}
+		</table>
+</div>
+    </body>
+</html>

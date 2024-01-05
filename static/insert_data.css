@@ -1,0 +1,40 @@
+
+h5{text-align: center;}
+
+.reg-form-body{
+    height: 100%;
+    background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+  }
+ 
+  .reg-form-div form{
+    margin-left: 25%;
+    font-size: 11px;}
+ 
+  .reg-form-info{
+    float: left;
+} 
+
+  .reg-form-info button{
+    background: transparent;
+    border: 1px solid deepskyblue;
+    padding: 3px 28% 3px 28%;
+        }
+
+.reg-form-info button:hover{
+    border: 1px solid cadetblue;
+    background: cadetblue;
+    transition: 1s;
+
+}
+.reg-form-info input{
+
+    display: inline-block;
+    border: 1px solid deepskyblue;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+#sub{
+  margin-left: 10%;
+}

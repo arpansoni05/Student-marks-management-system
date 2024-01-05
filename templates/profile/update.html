@@ -1,0 +1,94 @@
+
+{% include "profile/profile.html" %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>update</title>
+	<style >
+		.form{
+			text-align: center;
+		}
+        body{background-color: lightgray}
+	</style>
+</head>
+<body>
+	<form method="post", action="", name="reg-form", class= "form" >
+    {% csrf_token %}
+    <h3>Update...</h3>
+    <label>Roll Number : </label>
+    <input type="text" placeholder="Roll Number" name="rollnumber">
+	<button type = "submit" value="submit">Submit form</button>
+</form>
+<table border="1">
+
+{% if massage0 %}
+{% for x in massage0 %}
+<form action="updateresult/{{ x.id }}" method="post">
+{% comment %} <form action="{% url 'updateresult{{ x.id }}'%} " method="post"> {% endcomment %}
+{% csrf_token %}
+First Name:<br>
+<input name="firstname" value="{{ x.first_name }}">
+<br><br>
+Last Name:<br>
+<input name="lastname" value="{{ x.last_name }}">
+<br><br>
+Class:<br>
+<input name="class" value = "{{ x.class_student }}">
+<br><br>
+Maths:<br>
+<input name="maths" value="{{ x.maths }}">
+<br><br>
+Hindi:<br>
+<input name="hindi" value="{{ x.hindi }}">
+<br><br>
+English:<br>
+<input name="english" value="{{ x.english }}">
+<br><br>
+Environmental Science:<br>
+<input name="environmentalscience" value="{{ x.enviromental_science }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+{% endfor %}
+{% elif massage1%}
+{% for x in massage1 %}
+<form action="updateresult/{{ x.id }}" method="post">
+{% comment %} <form action="{% url 'updateresult{{ x.id }}'%} " method="post"> {% endcomment %}
+{% csrf_token %}
+First Name:<br>
+<input name="firstname" value="{{ x.first_name }}">
+<br><br>
+Last Name:<br>
+<input name="lastname" value="{{ x.last_name }}">
+<br><br>
+Class:<br>
+<input name="class" value = "{{ x.class_student }}">
+<br><br>
+Maths:<br>
+<input name="maths" value="{{ x.maths }}">
+<br><br>
+Hindi:<br>
+<input name="hindi" value="{{ x.hindi }}">
+<br><br>
+English:<br>
+<input name="english" value="{{ x.english }}">
+<br><br>
+Science:<br>
+<input name="science" value="{{ x.science }}">
+<br><br>
+Social Studies:<br>
+<input name="socialstudies" value="{{ x.social_studies }}">
+<br><br>
+<input type="submit" value="Submit">
+</form>
+
+{% endfor %}
+{% endif %} 
+{{updated}}
+</table>
+</body>
+</html>

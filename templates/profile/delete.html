@@ -1,0 +1,28 @@
+
+{% include "profile/profile.html" %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Delete</title>
+	<style >
+		.form{
+			text-align: center;
+		}
+        body{background-color: lightgray}
+	</style>
+</head>
+<body>
+	<form method="post", action="", name="reg-form", class= "form" >
+    {% csrf_token %}
+    <h3>Delete...</h3>
+    <label>Roll Number : </label>
+    <input type="text" placeholder="Roll Number" name="rollnumber">
+    <button type = "submit" value="submit">Submit form</button>
+
+</form>
+{{ massage }}
+</body>
+</html>

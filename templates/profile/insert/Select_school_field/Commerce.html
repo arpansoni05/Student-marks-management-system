@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Commerce</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'insert_data.css' %}">
+</head>
+<body class="reg-form-body">
+{% include "profile/profile.html" %}
+<h5>Insert Details (Commerce)</h5>
+<div class="reg-form-div">  
+<form method="post", action= "", name="field-form" >
+    {% csrf_token %}
+    <div class="reg-form-info"> 
+        
+        <label>Roll Number : </label><br>
+        <input type="text" placeholder="Roll Number" name="rollnumber"> 
+        <br><br>
+        <label> First Name : </label><br>
+        <input type="text" placeholder="Enter your first name" name="firstname"> 
+        <br><br>
+        <label> Last name : </label><br>
+        <input type="text" placeholder="Enter your last name" name="lastname">
+        <br><br>
+        <label> Class : </label><br>
+        <input type="text" placeholder="classname" name="class">
+        <br><br><br>
+        <button type = "submit" value="submit">Submit form</button>
+    </div>
+    <div class="reg-form-info" id = "sub"> 
+        <label> Accountancy : </label><br>
+        <input type="text" placeholder="Enter Accountancy Number" name="Accountancy">
+        <br><br>
+        <label> Business Studies : </label><br>
+        <input type="text" placeholder="Enter Business Studies Number" name="BusinessStudies">
+        <br><br>
+        <label> Economics : </label><br>
+        <input type="text" placeholder="Enter Economics Number" name="Economics">
+        <br><br>
+        <label> Informatics Practices : </label><br>
+        <input type="text" placeholder="Informatics Practices" name="InformaticsPractices">
+        <br><br>
+        <label> English : </label><br>
+        <input type="text" placeholder="Enter English Number" name="English">
+    </div>
+    </form>
+    <p>{{massage}}</p>
+</div>
+</body>
+</html>
+
+ 

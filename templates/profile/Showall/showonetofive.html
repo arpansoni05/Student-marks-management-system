@@ -1,0 +1,72 @@
+{% include "profile/profile.html" %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style type="text/css">
+        
+    	table{
+    		text-align: center;
+    		margin: 5% 0% 5% 30%;
+    		flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 5%;
+            box-sizing: border-box;
+            transition: 0.5s;   
+            font-size: 12px;
+    	}
+        body{
+            height: 100%;
+            background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+        }
+        th, td {
+        padding: 10px;
+        }
+        td a{
+            text-decoration: none;
+            color: black;
+        }
+        td ::after{
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: red;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+        td :hover::after{
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <table>
+			<tr> 
+                <th>Id No</th>
+			    <th>Roll Number</th>
+			    <th>E-mail</th> 			    
+			</tr>
+			    {% for line in show %}
+			<tr>
+                <td>{{ line.id }}</td> 
+                <td>{{ line.roll_number }}</td>
+                <td>{{ line.email1}}</td>
+                <div class="dropdown">
+                    <td><a href="searchdetail/{{line.id}}">Details <i class="fa fa-caret-right"></i></a> 
+                    
+			</tr>
+			    {% endfor %}
+		</table> 
+    </body>
+</html>

@@ -1,0 +1,64 @@
+
+ {% include "profile/profile.html" %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Search</title>
+	<style >
+		body{
+			text-align:center;
+		}
+		.form{
+			text-align: center;
+		}
+        body{background-color: lightgray}
+	</style>
+</head>
+<body>
+	<form method="post", action="", name="reg-form", class= "form" >
+    {% csrf_token %}
+    <h3>Search...</h3>
+    <label>Roll Number : </label>
+    <input type="text" placeholder="Roll Number" name="rollnumber">
+    <button type = "submit" value="submit">Submit form</button>
+
+</form>
+<br>
+{% if massage0 %}
+{% for x in massage0 %}
+
+<div>
+	<ul>
+		<li>First_name : {{ x.first_name }} </li>
+		<li>Last_name : {{x.last_name}} </li>
+		<li>Class : {{ x.class_student}}</li>
+		<li>Maths : {{ x.maths}}</li>
+		<li>Hindi : {{ x.hindi}} </li>
+		<li>English : {{ x.english}}</li>
+		<li>Enviromental Science : {{ x.enviromental_science}}</li>
+	</ul>
+</div>
+{% endfor %}
+{% elif massage1%}
+{% for x in massage1 %}
+<div>
+	<ul>
+		<li>First_name : {{ x.first_name }} </li>
+		<li>Last_name : {{x.last_name}} </li>
+		<li>Class : {{ x.class_student}}</li>
+		<li>Maths : {{ x.maths}}</li>
+		<li>Hindi : {{ x.hindi}} </li>
+		<li>English : {{ x.english}}</li>
+		<li>Science : {{ x.science}}</li>
+		<li>Social Studies : {{ x.social_studies}}</li>
+	</ul>
+</div>
+{% endfor %}
+{% endif %} 
+
+</body>
+</html>
+ 

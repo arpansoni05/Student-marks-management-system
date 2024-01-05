@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    {%load static%}
+    <head>
+        <style>
+           .Index-body{
+                min-height: 100vh;
+                width: 50%;
+                background-image: linear-gradient(rgba(4,9,30,0.7),
+                rgba(4,9,30,0.7)), url({%static 'Images/32058.jpg'%});
+                background-position: center;
+                background-size: cover;
+                position: relative;
+            }
+            .Index-div{
+                width: 90%;
+               
+                position: absolute;
+                top: 21%;
+                left: 50%;
+                text-align: center
+            }
+            .Index-div h1{
+                font-size: 18px;
+                padding-bottom: 22%;
+                
+            }
+            .button{
+                display: inline-block;
+                text-decoration: none;
+                
+                border: 2px solid black;
+                padding: 5px 15px;
+                font-size: 13px;
+                background: transparent;
+                position: relative;
+                cursor: pointer;
+                left: -15%
+            }
+            .button:hover{
+                border: 2px solid firebrick;
+                background: firebrick;
+                transition: 1s;}
+            .button2{
+                padding:5px 30px;
+                left: 11%
+            }
+
+        </style>
+        
+    </head>
+    <body class="Index-body">
+        <div class="Index-div">
+        <h1>STUDENT MARKS MANAGEMENT SYSTEM</h1>
+        <button class="button button1" onclick="window.location.href={% url 'register' %}"> Registration</button>
+
+        <button class="button button2" onclick="window.location.href={% url 'login' %}">  Login  </button>
+        </div>
+    </body>
+</html>

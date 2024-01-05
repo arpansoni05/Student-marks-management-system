@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+{% load static %}
+<style>
+        .profile-body{
+            height: 100%;
+            background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+        }
+        h4{
+            text-align: center;
+            padding-top: 10% 
+            
+        }
+    </style>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Collegeprofile</title>
+</head>
+<body class="profile-body">
+{%include 'profile/profile.html' %}
+<h4>WELCOME!!! <br><br> {{intro}} <br><br> TO <br><br> STUDENT MARKS MANAGEMENT SYSTEM </h4>
+</body>
+</html>

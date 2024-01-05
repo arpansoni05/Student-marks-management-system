@@ -1,0 +1,35 @@
+{% include "profile/profile.html" %}
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h3>Select Stream</h3>
+    <div class="school">
+        <ul>
+            <li>
+                <a href="{% url 'computerscience' %}">Computer Science (CSE)</a>
+            </li>
+            <li>
+                <a href="{% url 'informationtechnology' %}">Information Technology (IT)</a>
+            </li>
+            <li>
+                <a href="{% url 'Mechenical' %}">Mechenical</a>
+            </li>
+            <li>
+            	<a href="{% url 'Civil' %}">Civil</a>
+            </li>
+             <li>
+            	<a href="{% url 'Electronic' %}">Electronic</a>
+            </li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>
+
+
+
+

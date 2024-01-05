@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+<style>
+
+    .reg-form-body{
+        min-height: 90vh;
+        width: 40%;
+        background-image:url("{%static 'Images/01234.jpg'%}");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .reg-form-div form{
+/*        background-color: rgba(0, 0, 20, 0.2);*/
+        color: white;
+        position: relative;
+        top:40%;
+        left: 90%; 
+        padding-left: 20%;
+        padding-top: 5%;
+        font-size: 11px;
+ 
+    }
+    .reg-form-div form button{
+        background: transparent;
+        border: 1px solid deepskyblue;
+        color: white;
+        padding: 3px 24% 3px 24%;
+            }
+
+    .reg-form-div form button:hover{
+        border: 1px solid cadetblue;
+        background: cadetblue;
+        transition: 1s;
+
+    }
+    .reg-form-div form input{
+
+        display: inline-block;
+        border: 1px solid deepskyblue;
+        text-decoration: none;
+        color: black;
+        background: dimgray ;
+        position: relative;
+    }
+    .reg-form-div form p{
+        color: red;
+    }
+    </style>
+    </head>
+<body class="reg-form-body">
+    <div class="reg-form-div">
+    
+    <form method="post", action="{% url 'savereg' %}", name="reg-form" >
+    {% csrf_token %}
+    <h3>REGISTRATION FORM </h3>
+    <br>
+    <label>Name : </label><br>
+    <input type="text" placeholder="Enter name" name="name"> 
+    <br><br>
+    <label>Password : </label><br>
+    <input type="password" placeholder="Password" name="pass">
+    <br><br>
+    <label>Re-enter Password : </label><br>
+    <input type="password" placeholder="Re-enter Password" name="con_pass">
+    <br><br>
+    <label>Phone no. : </label><br>
+    <input type="tel" placeholder="phone number" name="phno">
+    <br><br>
+    <label>Email : </label><br>
+    <input type="email" placeholder="abc@gmail.com" name="email">
+    <br><br>
+    <button type = "submit" value="submit">Register</button>
+    <p>{{massage}}</p>
+    </form>
+    
+     
+</div>
+</body>
+</html>

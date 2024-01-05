@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>onetofive</title>
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'insert_data.css' %}"> -->
+    <style type="text/css">
+        
+h5{text-align: center;}
+
+.reg-form-body{
+    height: 100%;
+    background: linear-gradient(90deg, #FFC0CB 50%, #00FFFF 50%);
+  }
+ 
+  .reg-form-div form{
+    margin-left: 25%;
+    font-size: 11px;}
+ 
+  .reg-form-info{
+    float: left;
+} 
+
+  .reg-form-info button{
+    background: transparent;
+    border: 1px solid deepskyblue;
+    padding: 3px 28% 3px 28%;
+        }
+
+.reg-form-info button:hover{
+    border: 1px solid cadetblue;
+    background: cadetblue;
+    transition: 1s;
+
+}
+.reg-form-info input{
+
+    display: inline-block;
+    border: 1px solid deepskyblue;
+    border-radius: 2px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+#sub{
+  margin-left: 10%;
+}
+    </style>
+</head>
+<body class="reg-form-body">
+{% include "profile/profile.html" %}
+<h5>Insert Details 6 to 10</h5>
+<div class="reg-form-div">  
+<form method="post", action= "{% url 'sixtoten' %}", name="field-form" >
+    {% csrf_token %}
+    <div class="reg-form-info"> 
+        
+        <label>Roll Number : </label><br>
+        <input type="text" placeholder="Roll Number" name="rollnumber"> 
+        <br><br>
+        <label> First Name : </label><br>
+        <input type="text" placeholder="Enter your first name" name="firstname"> 
+        <br><br>
+        <label> Last name : </label><br>
+        <input type="text" placeholder="Enter your last name" name="lastname">
+        <br><br>
+        <label> Class : </label><br>
+        <input type="text" placeholder="classname" name="class">
+        <br><br><br>
+        <button type = "submit" value="submit">Submit form</button>
+    </div>
+    <div class="reg-form-info" id = "sub"> 
+        <label> Maths : </label><br>
+        <input type="text" placeholder="Enter Maths Number" name="maths">
+        <br><br>
+        <label> Hindi : </label><br>
+        <input type="text" placeholder="Enter Hindi Number" name="hindi">
+        <br><br>
+        <label> English : </label><br>
+        <input type="text" placeholder="Enter English Number" name="english">
+        <br><br>
+        <label> Science : </label><br>
+        <input type="text" placeholder="Enter English Number" name="science">
+        <br><br>
+        <label> Social_Studies : </label><br>
+        <input type="text" placeholder="Enter English Number" name="socialstudies">
+        <p>{{massage}}</p>
+    </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html>
+<html>
+  {% load static %}
+<style>
+
+    .log-form-body{
+        min-height: 90vh;
+        width: 40%;
+        background-image: url("{%static 'Images/01234.jpg'%}");
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .log-form-div form{
+/*        background-color: rgba(0, 0, 20, 0.2);*/
+        color: white;
+        position: relative;
+        top:40%;
+        left: 90%; 
+        padding-left: 20%;
+        padding-top: 25%;
+        font-size: 11px;
+ 
+    }
+    .log-form-div form button{
+        background: transparent;
+        border: 1px solid deepskyblue;
+        color: white;
+        padding: 3px 28% 3px 28%;
+            }
+
+    .log-form-div form button:hover{
+        border: 1px solid deepskyblue;
+        background: cadetblue;
+        transition: 1s;
+
+    }
+    .log-form-div form input{
+
+        display: inline-block;
+        border: 1px solid deepskyblue;
+        text-decoration: none;
+        color: black;
+        background: dimgray;
+        position: relative;
+    }
+    .log-form-div form p{
+      color: red;
+    }
+  </style>
+<body class="log-form-body">
+    <div class="log-form-div">
+    <form method="post", action="{% url 'comlog' %}", nane = "log-form">
+    {% csrf_token %}
+    <h3>Login </h3><br>
+    <label>E-mail : </label><br>
+    <input type="text" placeholder="abc@gmail.com " name="email">
+    <br><br>
+    <label>Password : </label><br>
+    <input type="password" placeholder="Password" name="pass">
+    <br><br>
+    <button type = "submit" value="submit">Login</button>
+    <br>
+    <p>{{massage}}</p>
+    </form>
+    </div>     
+</body>
+</html>

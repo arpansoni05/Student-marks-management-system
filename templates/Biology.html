@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>eleven tweleve</title>
+</head>
+<body>
+<form method="post", action="{% url 'insert' }", name="reg-form" >
+    {% csrf_token %}
+    <h3>Insert Details </h3>
+    <label>Roll Number : </label>
+    <input type="text" placeholder="Roll Number" name="rollnumber">
+    <br><br>
+    <label> first Name : </label>
+    <input type="text" placeholder="Enter your first name" name="firstname"> 
+    <br><br>
+    <label> last name : </label>
+    <input type="text" placeholder="Enter your last name" name="lastname">
+    <br><br>
+    <label> Biology : </label>
+    <input type="text" placeholder="Enter Biology Number" name="lastname">
+    <br><br>
+    <label> Physics : </label>
+    <input type="text" placeholder="Enter Physics Number" name="lastname">
+    <br><br>
+    <label> Chemistry : </label>
+    <input type="text" placeholder="Enter Chemistry Number" name="lastname">
+    <br><br>
+    <label> Hindi : </label>
+    <input type="text" placeholder="Enter Hindi Number" name="lastname">
+    <br><br>
+    <label> English : </label>
+    <input type="text" placeholder="Enter English Number" name="lastname">
+    <br><br>
+    <button type = "submit" value="submit">Submit form</button>
+    </form>
+</body>
+</html> 
